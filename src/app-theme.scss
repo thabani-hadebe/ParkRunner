@@ -1,0 +1,74 @@
+@import "~@angular/material/theming";
+@import "~@angular/cdk/overlay-prebuilt.css";
+
+$accent-colour: (
+  50: #f8f6f0,
+  100: #ede9db,
+  200: #e1dac3,
+  300: #d5cbaa,
+  400: #ccc098,
+  500: #c3b586,
+  600: #bdae7e,
+  700: #b5a573,
+  800: #ae9d69,
+  900: #a18d56,
+  A100: #ffffff,
+  A200: #fff3d4,
+  A400: #ffe6a1,
+  A700: #ffdf87,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$primary-colour: (
+  50: "#ffffff",
+  100: "#f2f2f2",
+  200: "#d6d6d6",
+  300: "#b3b3b3",
+  400: "#a3a3a3",
+  500: "#949494",
+  //
+    600: "#858585",
+  700: "#757575",
+  800: "#666666",
+  900: "#575757",
+  A100: "#ffffff",
+  A200: "#ead7d7",
+  A400: "#baa1a1",
+  A700: "#a59c9c",
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$app-primary: mat-palette($primary-colour, 500);
+$app-accent: mat-palette($accent-colour, 500);
+$app-warn: mat-palette($mat_red, 500);
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);

@@ -1,1 +1,261 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/theming";
+@import "app-theme.scss";
+@include mat-core();
+
+$primary-colour: #949494;
+$accent-colour: #c3b586;
+$warm-colour: #000000;
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/typography/AvenirLTStd-Black.otf);
+  src: url(assets/typography/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(assets/typography/material_icons.woff2) format("woff2"),
+    url(assets/typography/MaterialIcons-Regular.woff) format("woff"),
+    url(assets/typography/MaterialIcons-Regular.ttf) format("truetype");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+mat-toolbar {
+  top: 56px;
+  //box-shadow: 0px 1px 0px 0px #949494;
+  color: $accent-colour;
+}
+
+.button {
+  color: white;
+}
+
+html,
+body {
+  @include angular-material-theme($app-theme);
+  @include mat-progress-bar-theme($app-theme);
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+.mat-tab-body-wrapper {
+  flex-grow: 1;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  padding: 5px;
+}
+
+.nav-button {
+  height: 100%;
+}
+
+.right {
+  margin-left: 16px;
+}
+
+.mat-toolbar-row {
+  //margin-left: -16px;
+  margin-right: 64px;
+}
+
+.plain-title-spacing {
+  color: $accent-colour;
+}
+
+.left {
+  //padding-left: 32px;
+  //padding-right: 16px;
+}
+.title-spacing {
+  color: $accent-colour;
+}
+
+.fab-container {
+  /*position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  > div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 5px;
+
+    button {
+      margin-bottom: 17px;
+    }
+  }*/
+  position: absolute;
+  right: 30px;
+  bottom: 15px;
+  > button {
+    background-color: $accent-colour;
+  }
+}
+.item-colour {
+  background-color: $accent-colour;
+}
+
+.custom-dialog-container .mat-dialog-container {
+  /* add your styles */
+  padding: 0px !important;
+}
+
+.example-container {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  bottom: 0;
+  min-height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.section-heading {
+  //background-image: url(assets/img/logo.png) no-repeat;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.new-member-class {
+  padding: 0px;
+}
+
+.list-background-colour {
+  width: 200px;
+  background-color: #2f3235;
+}
+
+.top-bar {
+  color: 212329;
+  background-color: #fbfbfb;
+}
+
+.example-card {
+  max-width: 600px;
+  border-radius: 0%;
+}
+
+.section-heading {
+  background-color: #678eae;
+  color: #fbfbfb;
+}
+
+md-icon {
+  width: 64px;
+  height: 64px;
+  line-height: 16px;
+}
+
+.mat-form-field-infix {
+  width: 500px;
+}
+
+::ng-deep .mat-input-wrapper {
+  width: 400px !important;
+}
+
+.main-container {
+  padding: 10px;
+}
+
+app-new-member-details {
+  padding: 0px;
+}
+
+.mat-form-field-outline {
+  //padding-top: 10px;
+  margin-top: 20px;
+}
+
+.extended-fab-button {
+  width: unset;
+  padding: 0 26px;
+  border-radius: 29px;
+
+  .mat-icon {
+    margin-right: 10px;
+  }
+
+  .extended-fab-button__text {
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+.app-toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+::ng-deep .mat-input-underline {
+  display: none;
+}
