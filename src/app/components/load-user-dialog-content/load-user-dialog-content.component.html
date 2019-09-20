@@ -1,0 +1,7 @@
+<h1 matDialogTitle>Load User Type</h1>
+
+<mat-dialog-content>
+    <mat-list>
+        <mat-list-item matRipple *ngFor="let userType of userTypes" (click)="closeDialog(userType)">{{userType.value}}</mat-list-item>
+      </mat-list>
+</mat-dialog-content>

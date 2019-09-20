@@ -1,4 +1,6 @@
 
+<ng-container *ngIf="userType | async as selectedUserType">
+
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened style="width: calc(20%);">
     <div class="app-toolbar">
@@ -11,9 +13,17 @@
         </mat-toolbar-row>
       </mat-toolbar>
     </div>
+    <mat-toolbar>
+        <mat-toolbar-row color="primary">
+            <span > You're logged in as: {{selectedUserType.value}}</span>
+              <span class="example-spacer"></span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    <app-menu-items [menu]="userMenu"></app-menu-items>
   </mat-drawer>
   <mat-drawer-content>
-    Search Results
+    <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
 
+</ng-container>

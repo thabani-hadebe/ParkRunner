@@ -4,8 +4,7 @@ import { Menu } from 'src/app/models/menu';
 
 @Component({
   selector: 'app-menu-items',
-  templateUrl: './menu-items.component.html',
-  styleUrls: ['./menu-items.component.scss']
+  templateUrl: './menu-items.component.html'
 })
 export class MenuItemsComponent implements OnInit {
   private _menu: Observable<Menu>;
@@ -19,6 +18,7 @@ export class MenuItemsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
