@@ -4,7 +4,7 @@
     <br />
     <ng-container *ngIf="menuSectionItem.items == undefined">
       <mat-list>
-        <mat-list-item matRipple>{{menuSectionItem.label}}</mat-list-item>
+        <mat-list-item matRipple [routerLink]="['']">{{menuSectionItem.label}}</mat-list-item>
       </mat-list>
     </ng-container>
     <ng-container *ngIf="menuSectionItem.items != undefined">
@@ -16,7 +16,7 @@
             </mat-panel-title>
           </mat-expansion-panel-header>
           <mat-list *ngFor="let item of menuSectionItem.items">
-            <mat-list-item matRipple>{{item.label}}</mat-list-item>
+            <mat-list-item matRipple [routerLink]="['']">{{item.label}}</mat-list-item>
             <mat-divider></mat-divider>
           </mat-list>
         </mat-expansion-panel>
